@@ -11,6 +11,9 @@ public final class Shoes implements Character {
   @Override public void draw(java.awt.Graphics2D g, int x, int y) {
     wrapped.draw(g, x, y);
     // TODO: draw a visible pair of shoes below the body, within the tile.
+    g.setColor(java.awt.Color.ORANGE);
+    g.fillRect(x + 9, y + 29, 9, 6);
+    g.fillRect(x + 22, y + 29, 9, 6);
   }
 
   public int attack() { return wrapped.attack(); }

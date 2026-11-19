@@ -11,9 +11,11 @@ public final class Shield implements Character {
   @Override public void draw(java.awt.Graphics2D g, int x, int y) {
     wrapped.draw(g, x, y);
     // TODO: draw a visible shield to the left of the body, within the tile.
+    g.setColor(java.awt.Color.GREEN);
+    g.fillOval(x + 2, y + 10, 10, 16);
   }
 
   public int attack() { return wrapped.attack(); }
-  public int defense() { return wrapped.defense(); /* TODO: add 5 */ }
+  public int defense() { return wrapped.defense() + 5; /* TODO: add 5 */ }
   public String type() { return wrapped.type(); }
 }
